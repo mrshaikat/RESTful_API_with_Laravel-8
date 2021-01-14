@@ -18,17 +18,21 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-//Show All Data
-Route::get('country','App\Http\Controllers\CountryController@country');
+// //Show All Data
+// Route::get('country','App\Http\Controllers\CountryController@country');
 
-//Show Data BY ID
-Route::get('country/{id}','App\Http\Controllers\CountryController@countryByID');
+// //Show Data BY ID
+// Route::get('country/{id}','App\Http\Controllers\CountryController@countryByID');
 
-//Insert Data
-Route::post('country','App\Http\Controllers\CountryController@countrySave');
+// //Insert Data
+// Route::post('country','App\Http\Controllers\CountryController@countrySave');
 
-//Country Update
-Route::put('country/{id}','App\Http\Controllers\CountryController@countryUpdate');
+// //Country Update
+// Route::put('country/{id}','App\Http\Controllers\CountryController@countryUpdate');
 
-//Country Delete
-Route::delete('country/{id}','App\Http\Controllers\CountryController@countryDelete');
+// //Country Delete
+// Route::delete('country/{id}','App\Http\Controllers\CountryController@countryDelete');
+
+//Resource Route
+
+Route::apiResource('country','App\Http\Controllers\DeshExampleColntroller');

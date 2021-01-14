@@ -17,6 +17,7 @@ class CountryController extends Controller
     //Show Data by ID
 
     public function countryByID($id){
+
         $country = Country::find($id);
 
         if(is_null($country)){
